@@ -8,14 +8,72 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel = ShopModelView()
+    let tabIcons = ["house","star","cart","person"]
+    @State var indexSelectedIcons = 0
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+       
+        NavigationStack {
+            VStack {
+                ZStack{
+                    switch indexSelectedIcons {
+                        case 0:
+                        NavigationView{
+                            PrincipalView()
+                        }
+                       
+                        case 1:
+                        NavigationView{
+                            Text("2")
+                        }
+                        .navigationTitle("Favoritos")
+                        case 2:
+                        NavigationView{
+                            CarView(viewModel: ShopModelView())
+                        }
+                        .navigationTitle("Carrito de Compras")
+                    default:
+                        NavigationView{
+                            Text("5")
+                        }
+                        .navigationTitle("Usuario")
+                        }
+                    }
+                Spacer()
+                HStack{
+                    ForEach(0..<4){ icon in
+                        Spacer()
+                        Button{
+                            self.indexSelectedIcons = icon
+                        }label: {
+                            
+                            if indexSelectedIcons == icon{
+                                Image(systemName: tabIcons[icon])
+                                    .frame(width: 60,height: 60)
+                                    .background(.orange)
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .clipShape(Circle())
+                                    
+                                    .shadow(radius: 10)
+                                    .padding(.horizontal)
+                            }else{
+                                Image(systemName: tabIcons[icon])
+                                    .font(.title)
+                                    .padding(.horizontal)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        Spacer()
+                    }
+                }
+               
+            }
         }
-        .padding()
+       
     }
 }
 

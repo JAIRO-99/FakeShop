@@ -11,6 +11,15 @@
 		D7026B392BCE1BEA00DD63AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B382BCE1BEA00DD63AF /* ContentView.swift */; };
 		D7026B3B2BCE1BED00DD63AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7026B3A2BCE1BED00DD63AF /* Assets.xcassets */; };
 		D7026B3E2BCE1BED00DD63AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7026B3D2BCE1BED00DD63AF /* Preview Assets.xcassets */; };
+		D7026B452BCE1BFE00DD63AF /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B442BCE1BFE00DD63AF /* NetworkAPI.swift */; };
+		D7026B472BCE1C0700DD63AF /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B462BCE1C0700DD63AF /* ShopModel.swift */; };
+		D7026B492BCE1F8700DD63AF /* ShopModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B482BCE1F8700DD63AF /* ShopModelView.swift */; };
+		D7026B4B2BCE22AC00DD63AF /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */; };
+		D7026B4D2BCE369900DD63AF /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B4C2BCE369900DD63AF /* Color-Theme.swift */; };
+		D7D205712BCF1B820051BC9A /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D205702BCF1B820051BC9A /* PrincipalView.swift */; };
+		D7D205732BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7D205722BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf */; };
+		D7D205752BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7D205742BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf */; };
+		D7D205782BCF1EB40051BC9A /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D205772BCF1EB40051BC9A /* CarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,16 @@
 		D7026B382BCE1BEA00DD63AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7026B3A2BCE1BED00DD63AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7026B3D2BCE1BED00DD63AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7026B442BCE1BFE00DD63AF /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; usesTabs = 0; };
+		D7026B462BCE1C0700DD63AF /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		D7026B482BCE1F8700DD63AF /* ShopModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModelView.swift; sourceTree = "<group>"; };
+		D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		D7026B4C2BCE369900DD63AF /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		D7D205702BCF1B820051BC9A /* PrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
+		D7D205722BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		D7D205742BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		D7D205762BCF1CF40051BC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7D205772BCF1EB40051BC9A /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +70,18 @@
 		D7026B352BCE1BEA00DD63AF /* FakeShop */ = {
 			isa = PBXGroup;
 			children = (
+				D7D205762BCF1CF40051BC9A /* Info.plist */,
 				D7026B362BCE1BEA00DD63AF /* FakeShopApp.swift */,
 				D7026B382BCE1BEA00DD63AF /* ContentView.swift */,
+				D7D205702BCF1B820051BC9A /* PrincipalView.swift */,
+				D7D205772BCF1EB40051BC9A /* CarView.swift */,
+				D7026B4C2BCE369900DD63AF /* Color-Theme.swift */,
+				D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */,
+				D7026B442BCE1BFE00DD63AF /* NetworkAPI.swift */,
+				D7026B482BCE1F8700DD63AF /* ShopModelView.swift */,
+				D7026B462BCE1C0700DD63AF /* ShopModel.swift */,
+				D7D205742BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf */,
+				D7D205722BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf */,
 				D7026B3A2BCE1BED00DD63AF /* Assets.xcassets */,
 				D7026B3C2BCE1BED00DD63AF /* Preview Content */,
 			);
@@ -125,6 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D205752BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf in Resources */,
+				D7D205732BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf in Resources */,
 				D7026B3E2BCE1BED00DD63AF /* Preview Assets.xcassets in Resources */,
 				D7026B3B2BCE1BED00DD63AF /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7026B4B2BCE22AC00DD63AF /* ItemDetailView.swift in Sources */,
 				D7026B392BCE1BEA00DD63AF /* ContentView.swift in Sources */,
+				D7026B4D2BCE369900DD63AF /* Color-Theme.swift in Sources */,
+				D7D205712BCF1B820051BC9A /* PrincipalView.swift in Sources */,
+				D7026B472BCE1C0700DD63AF /* ShopModel.swift in Sources */,
+				D7026B492BCE1F8700DD63AF /* ShopModelView.swift in Sources */,
 				D7026B372BCE1BEA00DD63AF /* FakeShopApp.swift in Sources */,
+				D7026B452BCE1BFE00DD63AF /* NetworkAPI.swift in Sources */,
+				D7D205782BCF1EB40051BC9A /* CarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +313,7 @@
 				DEVELOPMENT_TEAM = NY24Z9G667;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FakeShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +343,7 @@
 				DEVELOPMENT_TEAM = NY24Z9G667;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FakeShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
