@@ -118,7 +118,7 @@ struct BloqueItemsProducts: View {
                                     Spacer()
                                     
                                     Button{
-                                        viewModel.addCar(item: items)
+                                      //  viewModel.addCar(item: )
                                         print("add car")
                                     }label: {
                                         Image(systemName: "cart")

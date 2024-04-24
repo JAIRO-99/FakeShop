@@ -17,6 +17,7 @@
 		D7026B4B2BCE22AC00DD63AF /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */; };
 		D7026B4D2BCE369900DD63AF /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B4C2BCE369900DD63AF /* Color-Theme.swift */; };
 		D77875212BD8CA710096899D /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77875202BD8CA710096899D /* RoundedCorners.swift */; };
+		D77875232BD8CC4F0096899D /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77875222BD8CC4F0096899D /* CarModel.swift */; };
 		D7D205712BCF1B820051BC9A /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D205702BCF1B820051BC9A /* PrincipalView.swift */; };
 		D7D205732BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7D205722BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf */; };
 		D7D205752BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7D205742BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf */; };
@@ -35,6 +36,7 @@
 		D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		D7026B4C2BCE369900DD63AF /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		D77875202BD8CA710096899D /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		D77875222BD8CC4F0096899D /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		D7D205702BCF1B820051BC9A /* PrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
 		D7D205722BCF1C7E0051BC9A /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		D7D205742BCF1C880051BC9A /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D7026B462BCE1C0700DD63AF /* ShopModel.swift */,
+				D77875222BD8CC4F0096899D /* CarModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				D7026B392BCE1BEA00DD63AF /* ContentView.swift in Sources */,
 				D7026B4D2BCE369900DD63AF /* Color-Theme.swift in Sources */,
 				D7D205712BCF1B820051BC9A /* PrincipalView.swift in Sources */,
+				D77875232BD8CC4F0096899D /* CarModel.swift in Sources */,
 				D7026B472BCE1C0700DD63AF /* ShopModel.swift in Sources */,
 				D7026B492BCE1F8700DD63AF /* ShopModelView.swift in Sources */,
 				D7026B372BCE1BEA00DD63AF /* FakeShopApp.swift in Sources */,

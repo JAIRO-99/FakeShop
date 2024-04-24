@@ -53,4 +53,38 @@ class NetworkAPI: NSObject, ObservableObject {
         task.resume()
     }
     
+    //Esta lista está para probar si puedo crear un nuevo Modelo y poder pasar otra vista a CardView
+    
+    func getListOfProductsCart(completed: @escaping (Result<[CarModel], APError>) -> Void){
+        
+        guard let url = URL(string: NetworkAPI.urlBase)else{
+            completed(.failure(.invalidURL))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let _ = error{
+                completed(.failure(.unableToComplete))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
+                completed(.failure(.invalidResponse))
+                return
+            }
+            guard let data = data else{
+                completed(.failure(.invalidData))
+                return
+            }
+            do{
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode([CarModel].self, from: data)
+                completed(.success(decodedResponse))
+            }catch{
+                print("Debug: Error \(error.localizedDescription)")
+                completed(.failure(.decodingError))
+            }
+        }
+        task.resume()
+    }
+    
 }

@@ -74,7 +74,7 @@ struct ItemDetailView: View {
                                
                             
                         Button{
-                            viewModel.addCar(item: shopModel)
+                            //viewModel.addCar(item: shopModel)
                         }label: {
                             Image(systemName: "cart")
                                 .font(.title2)
