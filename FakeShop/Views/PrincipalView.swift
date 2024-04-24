@@ -57,7 +57,7 @@ struct PrincipalView: View {
                         .foregroundColor(.brown)
                         
                         //VISTA DE ITEMS
-                        BloqueItemsProducts(viewModel: ShopModelView())
+                        BloqueItemsProducts()
                     }
                     .padding()
                 }
@@ -74,7 +74,7 @@ struct PrincipalView: View {
 }
 
 struct BloqueItemsProducts: View {
-    @ObservedObject var viewModel:ShopModelView
+    @ObservedObject var viewModel = ShopModelView()
     //var shopModel: ShopModel
     
     let columns = [GridItem(.adaptive(minimum: 150))]

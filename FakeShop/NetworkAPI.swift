@@ -46,7 +46,8 @@ class NetworkAPI: NSObject, ObservableObject {
                 let decodedResponse = try decoder.decode([ShopModel].self, from: data)
                 completed(.success(decodedResponse))
             }catch{
-                
+                print("Debug: Error \(error.localizedDescription)")
+                completed(.failure(.decodingError))
             }
         }
         task.resume()

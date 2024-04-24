@@ -12,11 +12,11 @@ struct ItemDetailView: View {
     @StateObject var viewModel = ShopModelView()
     var shopModel: ShopModel
     
-    @State private var counterItem = 1.0
+    @State private var counterItem = 1
     
     var itemPrice: String{
         if counterItem >= 1 {
-            let task = counterItem * (shopModel.price)
+            let task = Double(counterItem) * (shopModel.price)
             return String(task)
         }else{
             
@@ -60,20 +60,9 @@ struct ItemDetailView: View {
                             Spacer()
                             
                             HStack{
-                                Button{
-                                counterItem -= 1
-                                }label: {
-                                Image(systemName: "minus.circle.fill")
-                                }
-                                
-                                Text("\(counterItem, specifier: "%.0f")")
-                                    .fontWeight(.medium)
-                                
-                                Button{
-                                    counterItem += 1
-                                }label: {
-                                Image(systemName: "plus.circle.fill")
-                                }
+                                Spacer()
+                                Stepper("\(counterItem)", value: $counterItem, in: 1...5)
+                                    .frame(width: 120)
                             }
                         }
                         .padding(.horizontal,50)
@@ -81,13 +70,21 @@ struct ItemDetailView: View {
                         HStack{
                             
                             Text("Agregar al carrito")
+                                .font(.custom("PlayfairDisplay-Bold", size: 20))
                                
+                            
                         Button{
                             viewModel.addCar(item: shopModel)
                         }label: {
                             Image(systemName: "cart")
                                 .font(.title2)
+                                .padding()
                                 .buttonStyle(.bordered)
+                                .frame(width:40, height: 40)
+                                .background(.white)
+                                .clipShape(Capsule())
+                                .foregroundColor(.orange)
+                                .font(.title)
                         }
                         .padding()
                     }
@@ -112,19 +109,3 @@ struct ItemDetailView: View {
     ItemDetailView(shopModel: ShopModel.example)
 }
 
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
-    }
-}
-
-struct RoundedCorner: Shape {
-
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
-}
