@@ -12,7 +12,7 @@ struct CarView: View {
     @EnvironmentObject var viewModel: ShopModelView
     
     var body: some View {
-        if viewModel.carProducts.count > 0{
+        if viewModel.carProducts.count > 0 {
             List{
                 ForEach(viewModel.carProducts,id: \.id){items in
                     HStack{
@@ -32,7 +32,9 @@ struct CarView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.green)
                         }
+                        
                         Spacer()
+                        
                         Button{
                             viewModel.deleteItemProduct(id: items.id)
                         }label: {

@@ -17,7 +17,7 @@ class ShopModelView: ObservableObject{
     private let service = NetworkAPI.shared
     
     init(){
-        getListOfItem()
+       getListOfItem()
     }
     
     func getListOfItem(){
@@ -26,7 +26,7 @@ class ShopModelView: ObservableObject{
                 switch result {
                 case .success(let product):
                     self?.products = product
-                    
+                    //self?.carProducts = product
                 case .failure(let error):
                     print("Debug: Error \(error.localizedDescription)")
                     
@@ -39,7 +39,6 @@ class ShopModelView: ObservableObject{
     
     func addCar(item: ShopModel){
         carProducts.append(item)
-       
     }
     
     // Eliminar items del carrito

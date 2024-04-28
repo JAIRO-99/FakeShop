@@ -18,7 +18,7 @@ struct BloqueItemsProducts: View {
             ForEach(viewModel.products, id: \.id){ items in
                 NavigationLink{
                     ItemDetailView(shopModel: items)
-                        .environmentObject(ShopModelView())
+                       // .environmentObject(ShopModelView())
                 }label: {
                     ItemCard(item: items)
                         .environmentObject(ShopModelView())
@@ -39,6 +39,8 @@ struct BloqueItemsProducts: View {
 }
 
 #Preview {
+    ScrollView{
         BloqueItemsProducts()
             .environmentObject(ShopModelView())
+    }
 }

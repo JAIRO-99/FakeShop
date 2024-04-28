@@ -23,7 +23,7 @@ struct ContentView: View {
                         case 0:
                         NavigationView{
                             PrincipalView()
-                                .environmentObject(viewModel)
+                               // .environmentObject(viewModel)
                         }
                         
                         case 1:
@@ -34,7 +34,7 @@ struct ContentView: View {
                         case 2:
                         NavigationView{
                             CarView()
-                                .environmentObject(viewModel)
+                               .environmentObject(viewModel)
                         }
                         .navigationTitle("Carrito de Compras")
                        

@@ -58,7 +58,7 @@ struct PrincipalView: View {
                         
                         //VISTA DE ITEMS
                         BloqueItemsProducts()
-                            .environmentObject(ShopModelView())
+                           // .environmentObject(ShopModelView())
                     }
                     .padding()
                 }

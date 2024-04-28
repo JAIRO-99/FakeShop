@@ -23,6 +23,7 @@ struct ItemCard: View {
                         .background(.white)
                 }placeholder: {
                     ProgressView()
+                        .frame(width: 100,height: 100)
                 }
                 
                 VStack{
