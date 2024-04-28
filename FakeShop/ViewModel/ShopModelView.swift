@@ -11,7 +11,7 @@ import Foundation
 class ShopModelView: ObservableObject{
     
     @Published var products: [ShopModel] = []
-    @Published var carProducts: [CarModel] = []
+    @Published var carProducts: [ShopModel] = []
     @Published var totalPrice = 0
     
     private let service = NetworkAPI.shared
@@ -34,28 +34,15 @@ class ShopModelView: ObservableObject{
             }
         }
     }
-    func getListForCart(){
-        service.getListOfProductsCart { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let cart):
-                    self?.carProducts = cart
-                   
-                case .failure(let error):
-                    print("Debug: Error \(error.localizedDescription)")
-                    
-                }
-            }
-        }
-    }
     
     // agregar items al carrito
     
-    func addCar(item: CarModel){
+    func addCar(item: ShopModel){
         carProducts.append(item)
        
     }
     
+    // Eliminar items del carrito
     func deleteItemProduct(id: Int){
         carProducts.removeAll(where: {$0.id == id})
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CarView: View {
     
-    @ObservedObject var viewModel: ShopModelView
+    @EnvironmentObject var viewModel: ShopModelView
     
     var body: some View {
         if viewModel.carProducts.count > 0{
@@ -56,6 +56,7 @@ struct CarView: View {
 }
 
 #Preview {
-    CarView(viewModel: ShopModelView())
+    CarView()
+        .environmentObject(ShopModelView())
      
 }

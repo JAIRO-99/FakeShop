@@ -23,8 +23,9 @@ struct ContentView: View {
                         case 0:
                         NavigationView{
                             PrincipalView()
+                                .environmentObject(viewModel)
                         }
-                       
+                        
                         case 1:
                         NavigationView{
                             Text("2")
@@ -32,9 +33,11 @@ struct ContentView: View {
                         .navigationTitle("Favoritos")
                         case 2:
                         NavigationView{
-                            CarView(viewModel: ShopModelView())
+                            CarView()
+                                .environmentObject(viewModel)
                         }
                         .navigationTitle("Carrito de Compras")
+                       
                     default:
                         NavigationView{
                             Text("5")
@@ -57,7 +60,6 @@ struct ContentView: View {
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .clipShape(Circle())
-                                    
                                     .shadow(radius: 10)
                                     .padding(.horizontal)
                             }else{
@@ -70,13 +72,12 @@ struct ContentView: View {
                         Spacer()
                     }
                 }
-               
             }
         }
-       
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(ShopModelView())
 }

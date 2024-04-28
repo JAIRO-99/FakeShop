@@ -7,6 +7,10 @@
 
 import Foundation
 
+
+// No sé si utilizar este MODEL para obtener datos de la API.
+// Si eso se tendría que hacer, faltaría la func que llame a los datos en el file "Network API"
+
 struct CarModel: Codable, Identifiable{
     
     let id: Int

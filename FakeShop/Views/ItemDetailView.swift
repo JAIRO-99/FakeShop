@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemDetailView: View {
     
-    @StateObject var viewModel = ShopModelView()
+    @EnvironmentObject var viewModel: ShopModelView
     var shopModel: ShopModel
     
     @State private var counterItem = 1
@@ -74,7 +74,8 @@ struct ItemDetailView: View {
                                
                             
                         Button{
-                            //viewModel.addCar(item: shopModel)
+                          // viewModel.addCar(item: shopModel)
+                                
                         }label: {
                             Image(systemName: "cart")
                                 .font(.title2)
@@ -107,5 +108,6 @@ struct ItemDetailView: View {
 
 #Preview {
     ItemDetailView(shopModel: ShopModel.example)
+        .environmentObject(ShopModelView())
 }
 

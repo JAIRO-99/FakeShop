@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PrincipalView: View {
     
-    //var shopModel: ShopModel
+    @EnvironmentObject var viewModel: ShopModelView
     
     let columns = [GridItem(.adaptive(minimum: 150))]
     @State private var searchItem = ""
@@ -58,12 +58,13 @@ struct PrincipalView: View {
                         
                         //VISTA DE ITEMS
                         BloqueItemsProducts()
+                            .environmentObject(ShopModelView())
                     }
                     .padding()
                 }
             }
             .navigationTitle("Gracce's Shop")
-            //.searchable(text: $searchItem)
+           // .searchable(text: $searchItem, prompt: "Buscar producto")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -71,89 +72,5 @@ struct PrincipalView: View {
 
 #Preview {
     PrincipalView()
-}
-
-struct BloqueItemsProducts: View {
-    @ObservedObject var viewModel = ShopModelView()
-    //var shopModel: ShopModel
-    
-    let columns = [GridItem(.adaptive(minimum: 150))]
-    @State private var searchItem = ""
-    var body: some View {
-        LazyVGrid(columns: columns,spacing: 15) {
-            ForEach(viewModel.products, id: \.id){ items in
-                NavigationLink{
-                    ItemDetailView(shopModel: items)
-                }label: {
-                    ZStack {
-                        VStack{
-                            AsyncImage(url: URL(string: items.image)){image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .frame(maxHeight: .infinity)
-                                    .background(.white)
-                            }placeholder: {
-                                ProgressView()
-                            }
-                            
-                            VStack{
-                                Text(items.title)
-                                    .font(.headline)
-                                    .padding(.horizontal)
-                                    .foregroundColor(.white)
-                                
-                                HStack{
-                                    Text("$\(items.price, specifier: "%.2f")")
-                                        .font(.headline)
-                                        .padding()
-                                        .background(.gray)
-                                        .cornerRadius(10, corners: .bottomLeft)
-                                        .cornerRadius(10, corners: .topRight)
-                                        .foregroundColor(.white)
-                                        .bold()
-                                    
-                                    Spacer()
-                                    
-                                    Button{
-                                      //  viewModel.addCar(item: )
-                                        print("add car")
-                                    }label: {
-                                        Image(systemName: "cart")
-                                            .resizable()
-                                            .frame(width: 15,height: 15)
-                                            .padding(15)
-                                            .background(.orange)
-                                            .clipShape(Capsule())
-                                            .foregroundColor(.white)
-                                            .bold()
-                                    }
-                                }
-                                .padding()
-                            }
-                        }
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.lightBackground)
-                        )
-                        
-                        
-                    }
-                }
-            }
-            
-            .frame(width: 183,height: 250)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(.gray, lineWidth: 1)
-                
-            )
-            
-            .background(.ultraThinMaterial)
-            .cornerRadius(10)
-        }
-    }
+        .environmentObject(ShopModelView())
 }

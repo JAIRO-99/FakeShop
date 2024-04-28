@@ -16,6 +16,8 @@
 		D7026B492BCE1F8700DD63AF /* ShopModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B482BCE1F8700DD63AF /* ShopModelView.swift */; };
 		D7026B4B2BCE22AC00DD63AF /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */; };
 		D7026B4D2BCE369900DD63AF /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7026B4C2BCE369900DD63AF /* Color-Theme.swift */; };
+		D72EE8EA2BDDBD11001D746A /* BloqueItemsProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EE8E92BDDBD11001D746A /* BloqueItemsProducts.swift */; };
+		D72EE8EC2BDDE5B1001D746A /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EE8EB2BDDE5B1001D746A /* ItemCard.swift */; };
 		D77875212BD8CA710096899D /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77875202BD8CA710096899D /* RoundedCorners.swift */; };
 		D77875232BD8CC4F0096899D /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77875222BD8CC4F0096899D /* CarModel.swift */; };
 		D7D205712BCF1B820051BC9A /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D205702BCF1B820051BC9A /* PrincipalView.swift */; };
@@ -35,6 +37,8 @@
 		D7026B482BCE1F8700DD63AF /* ShopModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModelView.swift; sourceTree = "<group>"; };
 		D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		D7026B4C2BCE369900DD63AF /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		D72EE8E92BDDBD11001D746A /* BloqueItemsProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloqueItemsProducts.swift; sourceTree = "<group>"; };
+		D72EE8EB2BDDE5B1001D746A /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 		D77875202BD8CA710096899D /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		D77875222BD8CC4F0096899D /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		D7D205702BCF1B820051BC9A /* PrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
@@ -76,9 +80,9 @@
 			children = (
 				D7D205762BCF1CF40051BC9A /* Info.plist */,
 				D7026B362BCE1BEA00DD63AF /* FakeShopApp.swift */,
-				D7026B442BCE1BFE00DD63AF /* NetworkAPI.swift */,
-				D7026B482BCE1F8700DD63AF /* ShopModelView.swift */,
 				D7026B382BCE1BEA00DD63AF /* ContentView.swift */,
+				D718D80F2BD9AD7600553846 /* Network */,
+				D718D8102BD9AD8900553846 /* ViewModel */,
 				D778751E2BD8C9ED0096899D /* Views */,
 				D778751D2BD8C9D60096899D /* Model */,
 				D778751F2BD8CA330096899D /* Topics */,
@@ -96,6 +100,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D718D80F2BD9AD7600553846 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D7026B442BCE1BFE00DD63AF /* NetworkAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D718D8102BD9AD8900553846 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7026B482BCE1F8700DD63AF /* ShopModelView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D778751D2BD8C9D60096899D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				D7D205702BCF1B820051BC9A /* PrincipalView.swift */,
+				D72EE8E92BDDBD11001D746A /* BloqueItemsProducts.swift */,
+				D72EE8EB2BDDE5B1001D746A /* ItemCard.swift */,
 				D7026B4A2BCE22AC00DD63AF /* ItemDetailView.swift */,
 				D7D205772BCF1EB40051BC9A /* CarView.swift */,
 			);
@@ -200,12 +222,14 @@
 			files = (
 				D77875212BD8CA710096899D /* RoundedCorners.swift in Sources */,
 				D7026B4B2BCE22AC00DD63AF /* ItemDetailView.swift in Sources */,
+				D72EE8EA2BDDBD11001D746A /* BloqueItemsProducts.swift in Sources */,
 				D7026B392BCE1BEA00DD63AF /* ContentView.swift in Sources */,
 				D7026B4D2BCE369900DD63AF /* Color-Theme.swift in Sources */,
 				D7D205712BCF1B820051BC9A /* PrincipalView.swift in Sources */,
 				D77875232BD8CC4F0096899D /* CarModel.swift in Sources */,
 				D7026B472BCE1C0700DD63AF /* ShopModel.swift in Sources */,
 				D7026B492BCE1F8700DD63AF /* ShopModelView.swift in Sources */,
+				D72EE8EC2BDDE5B1001D746A /* ItemCard.swift in Sources */,
 				D7026B372BCE1BEA00DD63AF /* FakeShopApp.swift in Sources */,
 				D7026B452BCE1BFE00DD63AF /* NetworkAPI.swift in Sources */,
 				D7D205782BCF1EB40051BC9A /* CarView.swift in Sources */,
