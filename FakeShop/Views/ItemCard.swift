@@ -4,12 +4,12 @@
 //
 //  Created by Jairo Laurente Celis on 27/04/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct ItemCard: View {
     @EnvironmentObject var viewModel: ShopModelView
-    var item: ShopModel
+   var item: ShopModel
     var body: some View {
         ZStack {
             VStack{

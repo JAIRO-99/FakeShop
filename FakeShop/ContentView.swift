@@ -4,7 +4,9 @@
 //
 //  Created by Jairo Laurente Celis on 15/04/24.
 //
+//BORRAR
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
@@ -23,7 +25,7 @@ struct ContentView: View {
                         case 0:
                         NavigationView{
                             PrincipalView()
-                               // .environmentObject(viewModel)
+                                .environmentObject(viewModel)
                         }
                         
                         case 1:
@@ -34,7 +36,7 @@ struct ContentView: View {
                         case 2:
                         NavigationView{
                             CarView()
-                               .environmentObject(viewModel)
+                                .environmentObject(viewModel)
                         }
                         .navigationTitle("Carrito de Compras")
                        

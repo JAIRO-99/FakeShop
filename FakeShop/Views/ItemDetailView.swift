@@ -4,13 +4,13 @@
 //
 //  Created by Jairo Laurente Celis on 15/04/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct ItemDetailView: View {
     
     @EnvironmentObject var viewModel: ShopModelView
-    var shopModel: ShopModel
+        var shopModel: ShopModel
     
     @State private var counterItem = 1
     
@@ -50,7 +50,7 @@ struct ItemDetailView: View {
                         Text("Categoria: \(shopModel.category)")
                             .padding(.top,50)
                             .bold()
-                        Text(shopModel.description ?? "")
+                        Text(shopModel.descriptions ?? "")
                             .padding()
                             
                         HStack{

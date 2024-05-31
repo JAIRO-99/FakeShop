@@ -4,12 +4,12 @@
 //
 //  Created by Jairo Laurente Celis on 16/04/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct PrincipalView: View {
     
-    @EnvironmentObject var viewModel: ShopModelView
+   @EnvironmentObject var viewModel: ShopModelView
     
     let columns = [GridItem(.adaptive(minimum: 150))]
     @State private var searchItem = ""
@@ -58,7 +58,7 @@ struct PrincipalView: View {
                         
                         //VISTA DE ITEMS
                         BloqueItemsProducts()
-                           // .environmentObject(ShopModelView())
+                           // .environmentObject(viewModel)
                     }
                     .padding()
                 }

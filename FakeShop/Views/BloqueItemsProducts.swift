@@ -18,10 +18,10 @@ struct BloqueItemsProducts: View {
             ForEach(viewModel.products, id: \.id){ items in
                 NavigationLink{
                     ItemDetailView(shopModel: items)
-                       // .environmentObject(ShopModelView())
+                      
                 }label: {
                     ItemCard(item: items)
-                        .environmentObject(ShopModelView())
+                        
                 }
             }
             

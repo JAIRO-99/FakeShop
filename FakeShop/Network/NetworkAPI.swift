@@ -1,9 +1,7 @@
-//
-//  NetworkAPI.swift
-//  FakeShop
-//
-//  Created by Jairo Laurente Celis on 15/04/24.
-//
+
+
+
+
 
 import Foundation
 
@@ -16,7 +14,8 @@ enum APError: Error{
     case decodingError
 }
 
-class NetworkAPI: NSObject, ObservableObject {
+@Observable
+class NetworkAPI {
     
     static let shared = NetworkAPI()
     static let urlBase = "https://fakestoreapi.com/products"
@@ -54,3 +53,4 @@ class NetworkAPI: NSObject, ObservableObject {
     }
     
 }
+

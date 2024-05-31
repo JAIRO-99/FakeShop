@@ -4,13 +4,13 @@
 //
 //  Created by Jairo Laurente Celis on 16/04/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct CarView: View {
     
+   // @State var viewModel: ShopModelView
     @EnvironmentObject var viewModel: ShopModelView
-    
     var body: some View {
         if viewModel.carProducts.count > 0 {
             List{
@@ -27,7 +27,7 @@ struct CarView: View {
                         VStack(alignment:.leading){
                             Text(items.title)
                                 .font(.headline)
-                     
+                            
                             Text("$\(items.price, specifier: "%.2f")")
                                 .fontWeight(.bold)
                                 .foregroundColor(.green)
@@ -35,13 +35,14 @@ struct CarView: View {
                         
                         Spacer()
                         
-                        Button{
-                            viewModel.deleteItemProduct(id: items.id)
-                        }label: {
-                            Image(systemName: "trash")
-                                .font(.headline)
-                                .foregroundColor(.red)
-                        }
+                        Image(systemName: "trash")
+                            .font(.headline)
+                            .foregroundColor(.red)
+                            .onTapGesture {
+                                viewModel.deleteItemProduct(id: items)
+                            }
+                    
+                        
                     }
                 }
             }
@@ -60,5 +61,5 @@ struct CarView: View {
 #Preview {
     CarView()
         .environmentObject(ShopModelView())
-     
+      
 }
